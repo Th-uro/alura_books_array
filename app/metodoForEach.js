@@ -1,6 +1,7 @@
 const insereLivros = document.getElementById('livros')
 
 function exibeLivros(listaDeLivros) {
+  insereLivros.innerHTML = ''
   listaDeLivros.forEach(livro => {
     insereLivros.innerHTML += `
     <div class="livro">

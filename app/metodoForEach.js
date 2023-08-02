@@ -3,9 +3,11 @@ const insereLivros = document.getElementById('livros')
 function exibeLivros(listaDeLivros) {
   insereLivros.innerHTML = ''
   listaDeLivros.forEach(livro => {
+    let disponibilidade =
+      livro.quantidade > 0 ? 'livro__imagens' : 'livro__imagens indisponivel'
     insereLivros.innerHTML += `
     <div class="livro">
-    <img class="livro__imagens" src="${livro.imagem}"
+    <img class="${disponibilidade}" src="${livro.imagem}"
       alt="${livro.alt}" />
     <h2 class="livro__titulo">
       ${livro.titulo}
